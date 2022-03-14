@@ -12,6 +12,7 @@ TC1
 TC2
     Create Directory   E:${/}LTTS${/}robort${/}temp${/}My_Folder
     Create File    E:${/}LTTS${/}robort${/}temp${/}My_Folder${/}notes.txt     Ambika Chinmalli
-    #copy file
-#    remove file
-#remove directory
+    Sleep    10s
+    Copy File    E:${/}LTTS${/}robort${/}temp${/}My_Folder${/}notes.txt    E:${/}LTTS${/}robort${/}temp${/}}copied.txt
+    Remove File    E:${/}LTTS${/}robort${/}temp${/}My_Folder${/}notes.txt
+    Remove Directory    E:${/}LTTS${/}robort${/}temp${/}My_Folder
