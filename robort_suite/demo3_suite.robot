@@ -21,3 +21,4 @@ TC2
     Remove File    E:${/}LTTS${/}robort${/}temp${/}My_Folder${/}notes.txt
     #remove directory
     Remove Directory    E:${/}LTTS${/}robort${/}temp${/}My_Folder
+
