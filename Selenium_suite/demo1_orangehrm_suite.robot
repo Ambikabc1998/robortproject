@@ -25,7 +25,6 @@ TC2
     Input Text    id=txtUsername    Admin
     Input Password    id=txtPassword    admin123
     Click Element    id=btnLogin
-   
     Click Element    id=menu_pim_viewMyDetails
     Click Element    link=Emergency Contacts
     Click Element    id=btnAddContact
