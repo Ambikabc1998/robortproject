@@ -11,3 +11,8 @@ TC1
     Click Element    link=For Employer
     Switch Window   MediBuddy LaunchPad
     Input Text    id=getInTouchName    Ambika
+    Input Text    id=getInTouchEmail    ABC@gmail.com
+    Input Text    id=getInTouchMobile    12345
+    Input Text    id=getInTouchDesignation    Employee
+    Input Text    id=getInTouchEmpCount    10
+    Click Element    xpath=//input[@type='submit']
