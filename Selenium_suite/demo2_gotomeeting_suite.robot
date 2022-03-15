@@ -14,5 +14,6 @@ TC1
     Input Text    xpath=//input[@data-sc-field-name='lastName']     sat
     Input Text    xpath=//input[@data-sc-field-name='email']    John@gmail.com
     Input Text    xpath=//input[@data-sc-field-name="phone"]    12345
-
-    #Click Button    data-button=trial-submit
+    Select From List By Value    xpath=//select[@data-sc-field-name="employees"]    10 - 99
+    Click Button    xpath=//input[@type='submit']
+    [Teardown]      Close Browser
