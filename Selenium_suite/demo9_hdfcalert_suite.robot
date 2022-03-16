@@ -17,5 +17,6 @@ TC2
     Set Selenium Implicit Wait    20s
     Go To    url=https://nasscom.in/nasscom-membership
     Click Element    xpath=//a[@id='edit-submitted-contact-person-for-nasscom-email-id-cp']
-    ${alert_msg}    Handle Alert    action=ACCEPT       timeout=20s
-    Log To Console    ${alert_msg}
+    ${alert_text}    Handle Alert    action=ACCEPT       timeout=20s
+    Log To Console    ${alert_text}
+    Should Be Equal    ${alert_text}    Please enter amount in digit and greater than zero.
