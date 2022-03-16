@@ -1,5 +1,3 @@
-*** Settings ***
-Library    Collections
 *** Variables ***
 ${MY_NAME}      AmbikaChinmalli
 @{COLORS}       red     green       pink
@@ -27,13 +25,17 @@ TC4
     @{fruits}   Create List     apple       banana      mango
     Log To Console    ${fruits}
     Log To Console    ${fruits}[2]
+    
     Remove Values From List     ${fruits}       mango
     Log To Console    ${fruits}
+    
     Append To List    ${fruits}     orange
     Log To Console    ${fruits}
+    
     Insert Into List    ${fruits}    2    jackfruit
     Log To Console    ${fruits}
 
+    Log List    ${fruits}
 
 
 
