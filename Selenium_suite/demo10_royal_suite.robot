@@ -23,4 +23,7 @@ TC1 Sign Up
     Input Text    xpath=//input[@data-placeholder='Last name/Surname']    xyz
     Click Element    xpath=//span[text()='Month']
     Click Element    xpath=//span[contains(text(),'April')]
+    Click Element    xpath=//span[text()='Day']
+    Click Element    xpath=//span[contains(text(),' 4 ')]
+    Input Text    xpath=//input[@data-placeholder='Year']    1992
     Sleep    5s
