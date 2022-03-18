@@ -1,17 +1,18 @@
-*** Settings ***
-Library    OperatingSystem
-
 *** Variables ***
-&{PERSONAL_INFO}        firstname=Ambika        lastname=Chinmalli
+&{PERSONAL_DETAIL}      firstname=Ambika       lastname=Chinmalli      mobile=787887
 
 *** Test Cases ***
 TC1
-    Log To Console    &{PERSONAL_INFO}
-    Log To Console    &{PERSONAL_INFO}[firstname]
-    Log To Console    &{PERSONAL_INFO}[lastname]
+    Log To Console    ${PERSONAL_DETAIL}
+    Log To Console    ${PERSONAL_DETAIL}[firstname]
+    Log To Console    ${PERSONAL_DETAIL}[lastname]
 
 TC2
-    &{emp_dic}      Create Directory        empname=Ambika      companyname=ltts
-    Log To Console    &{emp_dic}
-    Log To Console    &{emp_dic}[empname]
-    Log To Console    &{emp_dic}[companyname]
+    Log To Console    ${PERSONAL_DETAIL}
+    Log To Console    ${PERSONAL_DETAIL}[firstname]
+    Log To Console    ${PERSONAL_DETAIL}[lastname]
+
+TC3
+    &{emp_dic}      Create Dictionary   empname=ambika    companyname=ltts
+    Log To Console    ${emp_dic}
+    Log To Console    ${emp_dic}[empname]
