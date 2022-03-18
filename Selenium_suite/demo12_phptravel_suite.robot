@@ -45,3 +45,11 @@ TC1
     Input Text    id=fchilds    2
 
     Click Element    xpath=//button[@id='flights-search']
+
+*** Comments ***
+Element Should Contain    //div[@class='section-heading']    LAX
+    Element Should Contain    //div[@class='section-heading']    DAL
+    Element Should Contain    //div[@class='section-heading']    31-03-2022
+
+    ${text}     Get Text    //div[@class='section-heading']
+    Log To Console    ${text}
