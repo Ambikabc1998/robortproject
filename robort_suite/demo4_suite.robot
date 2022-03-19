@@ -22,11 +22,11 @@ TC3
     Log To Console    ${count}
 
 TC4
-    @{fruits}   Create List     apple       banana      mango
+    @{fruits}   Create List     apple       banana      graphs
     Log To Console    ${fruits}
     Log To Console    ${fruits}[2]
     
-    Remove Values From List     ${fruits}       mango
+    Remove Values From List     ${fruits}       graphs
     Log To Console    ${fruits}
     
     Append To List    ${fruits}     orange
@@ -42,6 +42,6 @@ TC5
     Log To Console    ${count}
 
     FOR    ${i}    IN RANGE    0    ${count}    1
-        Log To Console    ${i}
+        Log To Console    ${COLORS}[${i}]
     END
 
