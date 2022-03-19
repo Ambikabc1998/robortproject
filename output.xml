@@ -1,57 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220319 11:41:43.148" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo4 Suite" source="E:\LTTS\robort\robort_project\robort_suite\demo4_suite.robot">
-<test id="s1-t1" name="TC5">
-<kw name="Get Length" library="BuiltIn">
-<var>${count}</var>
-<arg>${COLORS}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20220319 11:41:43.328" level="INFO">Length is 3</msg>
-<msg timestamp="20220319 11:41:43.329" level="INFO">${count} = 3</msg>
-<status status="PASS" starttime="20220319 11:41:43.326" endtime="20220319 11:41:43.329"/>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220319 12:42:38.697" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo3 Medibuddy Suite" source="E:\LTTS\robort\robort_project\Selenium_suite\demo3_medibuddy_suite.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220319 12:42:54.410" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220319 12:42:54.408" endtime="20220319 12:43:12.190"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${count}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220319 11:41:43.331" endtime="20220319 11:41:43.333"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220319 12:43:12.191" endtime="20220319 12:43:13.196"/>
 </kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>0</value>
-<value>${count}</value>
-<value>1</value>
-<iter>
-<var name="${i}">0</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220319 11:41:43.335" endtime="20220319 11:41:43.337"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220319 12:43:13.197" endtime="20220319 12:43:13.250"/>
 </kw>
-<status status="PASS" starttime="20220319 11:41:43.335" endtime="20220319 11:41:43.337"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220319 11:41:43.337" endtime="20220319 11:41:43.339"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://www.medibuddy.in/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220319 12:43:13.255" level="INFO">Opening url 'https://www.medibuddy.in/'</msg>
+<status status="PASS" starttime="20220319 12:43:13.254" endtime="20220319 12:43:20.466"/>
 </kw>
-<status status="PASS" starttime="20220319 11:41:43.337" endtime="20220319 11:41:43.339"/>
-</iter>
-<iter>
-<var name="${i}">2</var>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${i}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220319 11:41:43.339" endtime="20220319 11:41:43.341"/>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath=//*[text()='hello']</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[text()='hello']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 12:43:20.469" level="INFO">Clicking element 'xpath=//*[text()='hello']'.</msg>
+<msg timestamp="20220319 12:43:51.641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220319 12:43:52.052" level="FAIL">Element with locator 'xpath=//*[text()='hello']' not found.</msg>
+<status status="FAIL" starttime="20220319 12:43:20.468" endtime="20220319 12:43:52.052"/>
 </kw>
-<status status="PASS" starttime="20220319 11:41:43.339" endtime="20220319 11:41:43.341"/>
-</iter>
-<status status="PASS" starttime="20220319 11:41:43.334" endtime="20220319 11:41:43.341"/>
-</for>
-<status status="PASS" starttime="20220319 11:41:43.324" endtime="20220319 11:41:43.342"/>
+<status status="PASS" starttime="20220319 12:43:20.468" endtime="20220319 12:43:52.052"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Click Element</arg>
+<arg>xpath=//button[text()='Not Now']</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[text()='Not Now']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 12:43:52.055" level="INFO">Clicking element 'xpath=//button[text()='Not Now']'.</msg>
+<status status="PASS" starttime="20220319 12:43:52.054" endtime="20220319 12:43:52.647"/>
+</kw>
+<status status="PASS" starttime="20220319 12:43:52.053" endtime="20220319 12:43:52.648"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=For Employer</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 12:43:52.650" level="INFO">Clicking element 'link=For Employer'.</msg>
+<status status="PASS" starttime="20220319 12:43:52.650" endtime="20220319 12:43:53.327"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MediBuddy LaunchPad</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220319 12:43:53.329" endtime="20220319 12:44:11.854"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=getInTouchName</arg>
+<arg>Ambika</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:11.856" level="INFO">Typing text 'Ambika' into text field 'id=getInTouchName'.</msg>
+<status status="PASS" starttime="20220319 12:44:11.855" endtime="20220319 12:44:14.656"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=getInTouchEmail</arg>
+<arg>ABC@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:14.659" level="INFO">Typing text 'ABC@gmail.com' into text field 'id=getInTouchEmail'.</msg>
+<status status="PASS" starttime="20220319 12:44:14.659" endtime="20220319 12:44:15.252"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=getInTouchMobile</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:15.262" level="INFO">Typing text '12345' into text field 'id=getInTouchMobile'.</msg>
+<status status="PASS" starttime="20220319 12:44:15.261" endtime="20220319 12:44:15.742"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=getInTouchDesignation</arg>
+<arg>Employee</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:15.743" level="INFO">Typing text 'Employee' into text field 'id=getInTouchDesignation'.</msg>
+<status status="PASS" starttime="20220319 12:44:15.743" endtime="20220319 12:44:16.343"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=getInTouchEmpCount</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:16.344" level="INFO">Typing text '10' into text field 'id=getInTouchEmpCount'.</msg>
+<status status="PASS" starttime="20220319 12:44:16.344" endtime="20220319 12:44:18.273"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[text()='Get in Touch']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220319 12:44:18.274" level="INFO">Clicking element 'xpath=//button[text()='Get in Touch']'.</msg>
+<status status="PASS" starttime="20220319 12:44:18.274" endtime="20220319 12:44:23.733"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//div[contains(text(), 'digits')]</arg>
+<arg>Mobile Number should be 10 digits</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220319 12:44:23.737" level="INFO">Verifying element '//div[contains(text(), 'digits')]' contains exact text 'Mobile Number should be 10 digits'.</msg>
+<status status="PASS" starttime="20220319 12:44:23.736" endtime="20220319 12:44:24.655"/>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20220319 12:44:24.657" endtime="20220319 12:44:25.042"/>
+</kw>
+<kw name="Stop Recording Test" library="AutoRecorder">
+<arg>TC1</arg>
+<doc>There is no need to execute this keyword manually.
+Basically - alias for https://mihaiparvu.github.io/ScreenCapLibrary/ScreenCapLibrary.html#Stop%20Video%20Recording</doc>
+<msg timestamp="20220319 12:44:25.173" level="INFO" html="true">&lt;a href="recording_3.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_3.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220319 12:44:25.044" endtime="20220319 12:44:25.173"/>
+</kw>
+<status status="PASS" starttime="20220319 12:42:49.294" endtime="20220319 12:44:25.043"/>
 </test>
-<status status="PASS" starttime="20220319 11:41:43.154" endtime="20220319 11:41:43.346"/>
+<status status="PASS" starttime="20220319 12:42:38.776" endtime="20220319 12:44:25.178"/>
 </suite>
 <statistics>
 <total>
@@ -60,7 +131,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo4 Suite">Demo4 Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3 Medibuddy Suite">Demo3 Medibuddy Suite</stat>
 </suite>
 </statistics>
 <errors>
