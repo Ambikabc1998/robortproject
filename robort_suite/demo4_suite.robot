@@ -37,5 +37,11 @@ TC4
 
     Log List    ${fruits}
 
+TC5
+    ${count}    Get Length    ${COLORS}
+    Log To Console    ${count}
 
+    FOR    ${i}    IN RANGE    0    ${count}    1
+        Log To Console    ${i}
+    END
 
